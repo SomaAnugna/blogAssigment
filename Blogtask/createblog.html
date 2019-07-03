@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    
+    <div class="card createrow">
+        <div class="container  create1">
+                <div class="create" id="myTopnav" >
+                                <a href="#blog" class="blog">Create Blog</a>
+                               
+                        
+                              </div>
+                   <div class="createblog" id="createblog">
+                                
+            <input type="text" class="create_title" id="intitle" placeholder="title">
+            <textarea name="content" id="intextarea" cols="30" rows="10" placeholder="content" class="intextarea"></textarea>
+            
+              
+<a href="index.html"><button id="save" onclick='insertdata()' class="save">Save</button></a>
+<a href="index.html"><button class="cancel">Cancel</button></a>
+
+</div>
+<script>
+        var searchparam = new URLSearchParams(window.location.search);
+	    var getparam = searchparam.get("val");
+	    var  data = document.getElementById("intitle")	
+        console.log("RERER"+ getparam);
+        var editval = JSON.parse(localStorage.getItem('claims'));
+        console.log(editval[getparam]);
+        document.getElementById("intitle").value=editval[getparam].intitle;
+        document.getElementById("intextarea").value=editval[getparam].intextarea;
+        
+        updateVal=true;
+        </script>
+</body>
+</html>
+
