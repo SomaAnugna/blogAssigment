@@ -27,26 +27,13 @@
         //console.log("Allclaims : " + Allclaims);
 
         for (let [key, value] of Object.entries(Allclaims)) {
-
-          
-
-
-
-var anu = `<div class="container card ">
+   var anu = `<div class="container card ">
       <div class="topnav" id="myTopnav">
-                     
-                    </div>
-                    
-                    <div class="createblog " id="createblog " >
-                   
-                      
-
-                      
-
-                        <form class="form">
+        </div>
+           <div class="createblog " id="createblog " >
+                <form class="form">
                          <input type="text" id="intitle" class="titlefield" name="firstname" placeholder="Title.." value=" ${value.intitle}">
-
-                         <p class="editicon"> <i class="far fa-edit"  onclick="editpage(${key})"></i></p>
+                        <p class="editicon"> <i class="far fa-edit"  onclick="editpage(${key})"></i></p>
                          <textarea rows="7" style="margin-bottom:16px;"class="textareafield" cols="6"  id="intextarea" name="lastname" placeholder="Content..." value="${value.intextarea}">${value.intextarea}</textarea>
                        </form>
                   
@@ -55,11 +42,9 @@ var anu = `<div class="container card ">
 `;
 
 document.getElementById("sss").innerHTML+= anu;
-
 }
 
 }
-
 function editpage(val){
 var query = "?val="+val;
 window.location.href = "createblog.html"+query;
